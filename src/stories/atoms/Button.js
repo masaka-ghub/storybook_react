@@ -5,7 +5,7 @@ import styled from 'styled-components';
 /**
  * Primary UI component for user interaction
  */
-export const Button = ({ role, size, label, ...props }) => {
+export const Button = ({ role, size, label, handleClick, ...props }) => {
   return (
     <StyledButton
       type="button"
@@ -13,6 +13,7 @@ export const Button = ({ role, size, label, ...props }) => {
       // style={backgroundColor && { backgroundColor }}
       size={size}
       role={role}
+      onClick={handleClick}
       {...props}>
       {label}
     </StyledButton>

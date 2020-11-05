@@ -6,10 +6,10 @@ import { Button } from '../atoms/Button';
 /**
  * Primary UI component for user interaction
  */
-export const TodoItem = ({ id, value, hasDeleteButton, buttonLabel, onDeleteClick }) => {
+export const TodoItem = ({ id, value, hasDeleteButton, buttonLabel, deleteClick }) => {
   return (
     <StyledTodoItem>
-      {hasDeleteButton && <Button role="delete" size="small" label={buttonLabel} />}
+      {hasDeleteButton && <Button role="delete" size="small" label={buttonLabel} handleClick={deleteClick}/>}
       {value}
     </StyledTodoItem>
   );
@@ -44,12 +44,12 @@ Button.propTypes = {
   /**
    * function when deletebutton clicked
    */
-  onDeleteClick: PropTypes.func
+  deleteClick: PropTypes.func
 };
 
 Button.defaultProps = {
   value: '',
   hasDeleteButton: false,
   buttonLabel: '削除',
-  onDeleteClick: undefined
+  deleteClick: undefined
 };

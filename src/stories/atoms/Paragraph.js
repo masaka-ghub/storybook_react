@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
 
-export const TextSentence = ({ text, width, indent, formatted }) => {
+export const Paragraph = ({ text, width, indent, formatted }) => {
   return (
     <Sentence width={width} indent={indent} formatted={formatted}>
       {text}
@@ -10,7 +10,7 @@ export const TextSentence = ({ text, width, indent, formatted }) => {
   );
 };
 
-TextSentence.propTypes = {
+Paragraph.propTypes = {
   /**
    * width
    */

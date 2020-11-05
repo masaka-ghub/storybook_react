@@ -1,12 +1,12 @@
 import React from 'react';
-import { TextSentence } from './TextSentence';
+import { Paragraph } from './Paragraph';
 
 export default {
-  title: 'Example/atoms/TextSentence',
-  component: TextSentence
+  title: 'Example/atoms/Paragraph',
+  component: Paragraph
 };
 
-const Template = args => <TextSentence {...args} />;
+const Template = args => <Paragraph {...args} />;
 
 export const Normal = Template.bind({});
 Normal.args = {
